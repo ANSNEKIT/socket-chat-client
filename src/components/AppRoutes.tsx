@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
-import PageLogin from '../pages/PageLogin'
-import PageChat from '../pages/PageChat'
+import PageLogin from '../pages/PageLogin/PageLogin'
+import PageChat from '../pages/PageChat/PageChat'
 
 const AppRoutes = () => {
     return (

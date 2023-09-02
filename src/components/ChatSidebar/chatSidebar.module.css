@@ -1,0 +1,27 @@
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    padding: 20px;
+    border-right: 1px solid #555;
+    color: #000;
+}
+
+.title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.user {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 7px;
+}
+

@@ -1,5 +1,5 @@
-import React, { EventHandler } from 'react'
-import styles from '../styles/PageLogin.module.css'
+import React from 'react'
+import styles from './pageLogin.module.css'
 import { Link } from 'react-router-dom'
 
 const fields = {
@@ -24,7 +24,7 @@ const PageLogin = () => {
     }
 
     return (
-        <div className={styles.wrap}>
+        <>
             <div className={styles.container}>
                 <h1 className={styles.heading}>Войти в чат</h1>
 
@@ -64,7 +64,7 @@ const PageLogin = () => {
                     </Link>
                 </form>
             </div>
-        </div>
+        </>
     )
 }
 
