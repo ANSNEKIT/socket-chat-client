@@ -2,8 +2,7 @@
     width: 300px;
     height: 100vh;
     padding: 20px;
-    border-right: 1px solid #555;
-    color: #000;
+    background: #433c3c;
 }
 
 .title {
@@ -23,13 +22,14 @@
     font-weight: 500;
     line-height: 28px;
     margin-bottom: 7px;
-    background: #000;
+    /* background: #FF6900; */
+    border: 5px solid #a834fb;
     border-radius: 20px;
     color: #fff;
     padding: 5px 20px;
 }
 
 .userMe {
-    background: #FF6900;
+    background: #a834fb;
     color: #fff;
 }
