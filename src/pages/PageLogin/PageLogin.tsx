@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FormEventHandler, MouseEvent } from 'react'
 import styles from './pageLogin.module.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const fields = {
     USER_NAME: 'userName',
@@ -8,6 +8,8 @@ const fields = {
 }
 
 const PageLogin = () => {
+    const navigate = useNavigate();
+
     const { USER_NAME, ROOM_ID } = fields
     const [values, setValues] = React.useState({ [USER_NAME]: '', [ROOM_ID]: '' })
 
@@ -16,11 +18,19 @@ const PageLogin = () => {
         setValues({ ...values, [evtTarget.name]: evtTarget.value })
     }
 
-    const handleClick = (evt: React.MouseEvent<HTMLButtonElement>) => {
+    const hangleLogin = (evt: MouseEvent<HTMLButtonElement>) => {
+        evt.preventDefault();
         const hasEmpyValue = Object.values(values).some((key) => !key)
         if (hasEmpyValue) {
-            evt.preventDefault()
+            return;
         }
+        const chatSettings = {
+            nickname: values[USER_NAME],
+            room: values[ROOM_ID],
+        }
+        const urlParams = new URLSearchParams(chatSettings);
+        
+        navigate(`/chat?` + urlParams.toString())
     }
 
     return (
@@ -53,15 +63,10 @@ const PageLogin = () => {
                             onChange={handleChange}
                         />
                     </div>
-
-                    <Link
-                        className={styles.group}
-                        to={`/chat?name=${values[USER_NAME]}&room=${values[ROOM_ID]}`}
-                    >
-                        <button type="submit" className={styles.button} onClick={handleClick}>
-                            Войти
-                        </button>
-                    </Link>
+                    
+                    <button type="submit" className={styles.button} onClick={hangleLogin}>
+                        Войти
+                    </button>
                 </form>
             </div>
         </>

@@ -7,9 +7,16 @@
     border-bottom: 1px solid #555;
     background-color: #fff;
     color: #000;
+    gap: 20px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
 }
 
 .logoutBtn {
+    min-width: fit-content;
     padding: 10px 20px;
     margin: 0;
     border: none;
@@ -41,6 +48,7 @@
 .messageMe {
     margin-left: auto;
     background-color: #7B30AE;
+    text-align: right;
 }
 
 .nickname {

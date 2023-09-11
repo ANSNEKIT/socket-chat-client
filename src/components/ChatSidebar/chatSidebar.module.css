@@ -23,5 +23,13 @@
     font-weight: 500;
     line-height: 28px;
     margin-bottom: 7px;
+    background: #000;
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px 20px;
 }
 
+.userMe {
+    background: #FF6900;
+    color: #fff;
+}
